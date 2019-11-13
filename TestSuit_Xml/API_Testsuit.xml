@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Regression Test" preserve-order="true">
+
+<listeners>
+		<listener class-name="com.arc.fna.utils.SkySiteListener" />
+		<listener class-name="com.arcautoframe.utils.EmailReport" />
+		<!-- <listener class-name="com.skysite.utils.RetryAnalyzerImpl" /> -->
+		<!-- <listener class-name="com.arc.fna.utils.RetryListener"/> -->
+	</listeners>
+	
+ <test name="Chrome:API Reports" preserve-order="true"> 
+	<parameter name="browser" value="chrome" />
+		<classes>
+		    <class name="com.arcfacilities.tests.TC001_Registration_API"/>	
+		     <class name="com.arcfacilities.tests.TC002_Login_API"/>
+		     <class name="com.arcfacilities.tests.TC002_SSO_login"/>	  
+		  </classes>
+	</test> 
+	
+	
+ </suite>
